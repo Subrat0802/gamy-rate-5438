@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+        }
+
+        #nav{
+            width: 100%;
+            height: 130px;
+            
+            background-color: rgb(16,132,126);
+        }
+        #logo img{
+            width: 180px;
+        }
+        #logo{
+            padding:18px;
+        }
+        
+        #top{
+            display: flex;
+        }
+        #locsrch{
+            display: flex;
+        }
+        #locsrch div{
+            display: flex;
+        }
+
+        #pincode{
+            height: 52px;
+            width: 200px;
+            border-radius: 5px 0px 0px 5px;
+            border: 0;
+            margin-top: 15px;
+            padding: 0 15px 0 15px;
+            margin-left: 30px;
+
+        }
+        div>input{
+            height: 52px;
+            width: 600px;
+            border: 0;
+            margin-top: 15px;
+            padding: 0 15px 0 15px;
+        }
+        #search{
+            width: 600px;
+            height: 52px;
+            padding-left: 30px;
+            border: 0;
+           
+            margin-left: -4px;
+            margin-top: 15px;
+            
+        }
+        #searchlogo{
+            display: flex;
+            margin-top: 15px;
+            width: 55px;
+            height: 52px;
+            background-color: rgb(244,247,251);
+            border-radius: 0 5px 5px 0;
+            
+        }
+        #searchlogo img{
+            width: 25px;
+            height: 25px;
+            margin: auto;
+        }
+        #searchlogo:hover{
+            background-color: rgb(232, 233, 235);
+        }
+        #select option{
+            font-size: 20px;
+        }
+        #select select{
+            font-size: 20px;
+        }
+        #select input{
+            font-size: 20px;
+        }
+        #bottom{
+            display: flex;
+            height: 30px;
+        }
+        #option{
+            display: flex;
+            margin-left: 240px;
+            color: white;
+            
+            
+        }
+        #option button{
+            padding: 0 15px 0 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: white;
+            background-color: rgb(16,132,126);
+            border: 0;
+        }
+        #option button:hover{
+            
+            
+            
+            text-decoration: underline;
+            text-decoration-color:white;
+            text-decoration-thickness: 3px;
+            
+            
+        }
+        
+        
+
+        #botcart{
+            border: 0;
+            width: 350px;
+            margin-left: 200px;
+            display: flex;
+            font-size: 18px;
+           
+        }
+        #botcart div{
+            border: 0;
+            width: 150px;
+            display: flex;
+            color: white;
+            margin-top: -4px;
+        }
+        #botcart div>p{
+           margin: auto;
+           margin-left: -1px;
+        }
+        #botcart div:nth-child(3){
+            margin-left: 10px;
+            width: 90px;
+        }
+        #botcart div:nth-child(1){
+            width: 90px;
+            margin-right: 10px;
+        }
+
+        #RTPCRtop{
+            display: flex;
+            width: 100%;
+            height: 550px;
+            
+            margin-top: 40px;
+        }
+        #RTPCRtop>div:nth-child(1){
+            height: 100%;
+            width: 700px;
+            
+            margin-left: 100px;
+        }
+        #RTPCRtop>div:nth-child(2){
+            height: 100%;
+            width: 500px;
+            
+        }
+
+        #covid{
+            display:  flex;
+            padding: 25px;
+            height: 100px;
+            
+            font-family: 'Poppins', sans-serif;
+
+        }
+        #covid img{
+            width: 45px;
+            height: 45px;
+            margin-top: 15px;
+            margin-right: 18px;
+        }
+        #covidinfo{
+            padding: 10px 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            background-color:rgb(255,248,218);
+            color: rgb(252,128,25);
+            border-radius: 7px;
+        }
+        #covidbtn button{
+            width: 200px;
+            
+            font-size: 20px;
+            color:rgb(16,132,126);
+            background-color: white;
+            border: 0;
+            text-align: left;
+            margin-top: 25px;
+            
+            
+        }
+        #covidbtn button:hover{
+            text-decoration: underline;
+            text-decoration-color:rgb(16,132,126);
+            text-decoration-thickness: 3px;
+           
+            
+        }
+        #coviddes{
+            font-family: 'Poppins', sans-serif;
+           font-size: 17px;
+            color: grey;
+            line-height: 25px;
+        }
+        #delt{
+            font-size: 12px;
+            color: grey;
+            padding: 50px 30px;
+        }
+        #delt button{
+            width: 400px;
+            font-size: 25px;
+            color: white;
+            background-color: rgb(76, 72, 72);
+            padding: 10px ;
+            border-radius: 8px;
+            border: 0;
+        }
+        #delt button:hover{
+            background-color: black;
+        }
+        #trust{
+            display: flex;
+            width: 80%;
+            margin: auto;
+            
+            font-family: 'Open Sans', sans-serif;
+            
+        }
+        #trust div{
+            padding: 20px;
+        }
+        #trust>div>img+p{
+            font-size: 16px;
+            color: rgb(56, 55, 55);
+            line-height: 22px;
+        }
+        #trust>div>img+p+p{
+            color: grey;
+            line-height: 25px;
+            
+        }
+        
+        #app{
+            width: 100%;
+            border: 1px solid rgb(187, 187, 187);
+            height: 450px;
+            display:  flex;
+            padding: 20px 100px;
+            
+        }
+        #app button{
+            background-color: rgb(93, 90, 90);
+            width: 200px;
+            height: 50px;
+            color: white;
+            text-align: center;
+            border: 0;
+            border-radius: 7px;
+            
+        }
+        #app button:hover{
+            background-color: rgb(65, 63, 63);
+        }
+        #app>div{
+            width: 40%;
+            margin-left: 50px;
+            
+            
+        }
+        #app button+button{
+            margin-top: 35px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+
+        <div id="top">
+            <div id="logo">
+                <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="">
+            </div>
+            
+            <div id="locsrch">
+                <div>
+                    <select name="" id="pincode">
+                        <option value="">Select Pincode</option>
+                        <option value="">Mumbai 456525</option>
+                        <option value="">Delhi 253641</option>
+                        <option value="">Hydrabad 253647</option>
+                    </select>
+                </div>
+            <div>
+                <input type="search" placeholder="Search medicines and Healthcare products" id="search">
+                <div id="searchlogo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBSIblY4OhYsM1ak8YYftISWUK3vL0lfdy6Q&usqp=CAU" alt="">
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+
+        <div id="bottom">
+            <div id="option">
+                
+                <a href="day-3.html"><button>Order Medicines</button></a>
+                <a href="day-4.html"><button>Healthcare Products</button></a> 
+                <a href=""><button>Lab Tests</button></a>
+                <a href="day-5.html"><button>RTPCR</button></a>
+            </div>
+            <div id="botcart">
+                <div>
+                    <img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt="">
+                    <p>Offers</p>
+                </div>
+                <div>
+                    <img src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" alt="">
+                    <p>Login/SignUp</p>
+                </div>
+                <div>
+                    <img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" alt="">
+                    <p>Cart</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="RTPCRtop">
+            <div>
+                <div id="covid">
+                    <img src="https://assets.pharmeasy.in/web-assets/dist/6b3d644c.svg" alt="">
+                    <h1>Covid 19 RTPCR (Corona Virusd SARS-CoV2)</h1>
+                </div>
+                <div id="covidinfo">
+                    <p>
+                        The COVID-19 laboratory test can detect positive coronavirus cases. Any individual with symptoms like cough, high fever, shortness of breath, respiratory and breathing difficulties, and with a history of international travel or contact with Covid -19 +ve
+                    </p>
+                </div>
+                <div id="covidbtn">
+                    <button>Description</button>
+                    <button>Test requirements</button>
+                </div>
+
+                <div id="coviddes">
+                    <p>The COVID-19 laboratory test can detect positive coronavirus cases. Any individual with symptoms like cough, high fever, shortness of breath, respiratory and breathing difficulties, and with a history of international travel or contact with Covid -19 positive cases, can book this test with prior consultation by General Physician. The result of this test will be informed to the relevant authorities as mandated by the government. Home sample collection will be done by an expert technician.</p>
+                </div>
+
+            </div>
+
+            <div id="delt">
+                <h1>Please select a test to process</h1>
+                <button>View Cart</button>
+            </div>
+        </div>
+        <div id="trust">
+            <div>
+                <img src="https://assets.pharmeasy.in/web-assets/dist/9407515b.svg?dim=0x72&dpr=1&q=100" alt="">
+                <p>Trusted Labs</p>
+                <p>Every test booked via PharmEasy is conducted by certified labs that are 100% verified and trustworthy.</p>
+            </div>
+            <div>
+                <img src="https://assets.pharmeasy.in/web-assets/dist/0105ddc1.svg?dim=0x72&dpr=1&q=100" alt="">
+                <p>Home Visit</p>
+                <p>With PharmEasy, you get a FREE sample pick-up* by professional phlebotomists from your home or preferred location.</p>
+            </div>
+            <div>
+                <img src="https://assets.pharmeasy.in/web-assets/dist/fc71c500.svg?dim=0x72&dpr=1&q=100" alt="">
+                <p>Timely and Accurate Reports</p>
+                <p>Once collected, samples will be sent to labs for processing. Detailed reports will be shared within a stipulated timeline.</p>
+            </div>
+            <div>
+                <img src="https://assets.pharmeasy.in/web-assets/dist/4a11ac5a.svg?dim=0x72&dpr=1&q=100" alt="">
+                <p>Up to 70% OFF</p>
+                <p>At PharmEasy, you save at every step! On diagnostic tests, get up to 70% OFF on various tests and test packages.</p>
+            </div>
+
+        </div>
+
+        <div id="app">
+            <img src="https://pharmeasy.in/_next/image?url=%2Ficons%2FfooterMobile.jpg&w=256&q=75" alt="">
+            <div>
+                <h2>Download the App for Free</h2>
+                <button><img src="https://pharmeasy.in/_next/image?url=%2Ficons%2FplayStore.png&w=32&q=75" alt=""> Play Store</button>
+                <button><img src="https://pharmeasy.in/_next/image?url=%2Ficons%2FappStore.png&w=32&q=75" alt=""> IOS</button>
+            </div>
+        </div>
+</body>
+</html>
